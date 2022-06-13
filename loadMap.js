@@ -27,13 +27,13 @@ function loadAccidentPoints(map, data) {
         })
     });
 
-    //var vectorSource = new ol.source.Vector({
-     //   features: features,
-    //    wrapX: false,
-    //});
+    var vectorSource = new ol.source.Vector({
+        features: features,
+        wrapX: false,
+    });
 
     var vector = new ol.layer.Vector({
-        features: features,
+        source: vectorSource,
         style: function (feature) {
             return styles[feature.get('size')];
         },
