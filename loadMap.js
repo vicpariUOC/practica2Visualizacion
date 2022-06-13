@@ -33,7 +33,7 @@ function loadAccidentPoints(map, data) {
     //});
 
     var vector = new ol.layer.Vector({
-        source: features,
+        features: features,
         style: function (feature) {
             return styles[feature.get('size')];
         },
